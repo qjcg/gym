@@ -1,5 +1,14 @@
 * Forth
 
+** TODO Testing
+
+Create some words to unit-test the code in this file.
+
+#+begin_src forth
+: TEST -1 = -1 = ; \ TODO add useful code here.
+#+end_src
+
+
 ** Starting Forth
 
 Exercises from [[https://www.forth.com/starting-forth/][Starting Forth by Leo Brodie]].
