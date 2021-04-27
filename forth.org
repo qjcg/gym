@@ -20,9 +20,12 @@ Exercises from [[https://www.forth.com/starting-forth/][Starting Forth by Leo Br
   #+begin_src forth
     : GIFT ." Bookends" ;
     : GIVER ." Bob" ;
-    : THANKS CR ." Dear " GIVER ." , thanks for the " GIFT  ." ." ;
+    : THANKS ." Dear " GIVER ." , thanks for the " GIFT  ." ." ;
     THANKS
   #+end_src
+
+  #+RESULTS:
+  : Dear Bob, thanks for the Bookends.
 
 **** c1p2
 
@@ -36,12 +39,14 @@ Exercises from [[https://www.forth.com/starting-forth/][Starting Forth by Leo Br
 
    - .s prints the stack non-destructively.
 
-**** C2P1
-
   #+begin_src forth
+    \ c2p1
     : QUARTERS 4 /MOD . ." ones and " . ." quarters " ;
     22 QUARTERS
   #+end_src
+
+  #+RESULTS:
+  : 5 ones and 2 quarters 
 
 
 *** CHAPTER 4: Decisions, Decisions...
@@ -56,13 +61,20 @@ Exercises from [[https://www.forth.com/starting-forth/][Starting Forth by Leo Br
    12 ?FULL
 
 
-   : TERM ( "..." -- )   sh ." alacritty" ;
-   TERM
  #+end_src
+
+ #+RESULTS:
+ : 
+ : alacritty
 
 
 ** Gforth Manual
 
    Notes and tutorial from the [[https://gforth.org/manual/index.html][Gforth Manual]].
 
-*** 3 Forth Tutorial
+*** Personal Notes
+
+#+begin_src forth
+   : TERM ( "..." -- )   s" alacritty" system ;
+   TERM
+#+end_src
