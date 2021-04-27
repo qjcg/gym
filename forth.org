@@ -1,0 +1,59 @@
+* Forth
+
+** Starting Forth
+
+Exercises from [[https://www.forth.com/starting-forth/][Starting Forth by Leo Brodie]].
+
+*** CHAPTER 1: Fundamental Forth
+
+**** c1p1
+
+  #+begin_src forth
+    : GIFT ." Bookends" ;
+    : GIVER ." Bob" ;
+    : THANKS CR ." Dear " GIVER ." , thanks for the " GIFT  ." ." ;
+    THANKS
+  #+end_src
+
+**** c1p2
+
+ #+begin_src forth
+   : TEN-LESS ( n -- n )   10 - ;
+   assert1( 100 TEN-LESS 90 = ) \ true (-1).
+ #+end_src
+
+
+*** CHAPTER 2: How to Get Results
+
+   - .s prints the stack non-destructively.
+
+**** C2P1
+
+  #+begin_src forth
+    : QUARTERS 4 /MOD . ." ones and " . ." quarters " ;
+    22 QUARTERS
+  #+end_src
+
+
+*** CHAPTER 4: Decisions, Decisions...
+
+ #+begin_src forth
+   : ?FULL
+       12 >=
+       IF CR CR ." It's FULL! " CR CR
+       ELSE  CR CR ." NO SIR IT IS NOT FULL!" CR CR
+       THEN ;
+   5 ?FULL
+   12 ?FULL
+
+
+   : TERM ( "..." -- )   sh ." alacritty" ;
+   TERM
+ #+end_src
+
+
+** Gforth Manual
+
+   Notes and tutorial from the [[https://gforth.org/manual/index.html][Gforth Manual]].
+
+*** 3 Forth Tutorial
