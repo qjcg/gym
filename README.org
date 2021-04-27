@@ -1,6 +1,6 @@
 * gym
 
-Following various exercises and tutorials.
+A place for learning.
 
 ** License
 
